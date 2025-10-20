@@ -41,7 +41,7 @@ app.all('*', (req, res) => {
               method: "POST",
               body: body,
               json: true,
-              url: `${targetServer}/pollResult${req.originalUrl}/${body.response_token}`
+              url: `${targetServer}${req.originalUrl}ByToken` // "https://lamdera.com/getAllUsersByToken"
             };
             request(pollOptions, (err, response, body) => {
                 if (err) {
